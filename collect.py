@@ -23,6 +23,7 @@ def on_message(client, userdata, message):
     }
     with open(data_file, 'a') as fd:
         json.dump(data, fd)
+        fd.write('\n')
 
 
 client = mqtt.Client(client_name)
